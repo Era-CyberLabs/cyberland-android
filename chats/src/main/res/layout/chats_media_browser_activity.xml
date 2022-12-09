@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.bcm.messenger.common.ui.CommonTitleBar2
+        android:id="@+id/chats_media_browser_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:center_text="@string/chats_media_and_files"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:right_text="@string/chats_select"
+        app:right_text_color="?attr/common_title_bar_right_text_color"
+        app:right_type="text" />
+
+    <LinearLayout
+        android:id="@+id/chats_media_browser_selector"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="@dimen/common_horizontal_gap"
+        android:layout_marginEnd="@dimen/common_horizontal_gap"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chats_media_browser_title">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/media_browser_tab"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:tabMode="fixed"
+            app:tabIndicator="@null"
+            app:tabRippleColor="?attr/common_view_background_transparent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chats_media_browser_title"/>
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/media_browser_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chats_media_browser_selector" />
+
+    <LinearLayout
+        android:id="@+id/media_browser_more_layout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="?attr/common_view_background"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/media_browser_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/selection_size_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="?attr/common_text_main_color"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/browser_share_img"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="center"
+            android:src="@drawable/chats_conversation_forward_icon"
+            android:tint="?attr/common_icon_color" />
+
+        <ImageView
+            android:id="@+id/browser_save_img"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="center"
+            android:src="@drawable/chats_conversation_save_icon"
+            android:tint="?attr/common_icon_color" />
+
+        <ImageView
+            android:id="@+id/browser_delete_img"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="center"
+            android:src="@drawable/chats_conversation_delete_icon" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

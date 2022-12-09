@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CommonBcmTheme.Basic" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:statusBarColor">@color/common_color_transparent</item>
+        <item name="android:navigationBarColor">@color/common_default_background_color</item>
+
+        <item name="android:windowBackground">@color/common_default_background_color</item>
+
+        <item name="common_title_bar_left_icon_color">@color/common_default_icon_color</item>
+        <item name="common_title_bar_left_text_color">@color/common_text_main_color</item>
+        <item name="common_title_bar_right_icon_color">@color/common_default_icon_color</item>
+        <item name="common_title_bar_right_text_color">@color/common_text_main_color</item>
+        <item name="common_title_bar_center_text_color">@color/common_text_main_color</item>
+        <item name="common_title_bar_background">@color/common_default_background_color</item>
+
+        <item name="common_activity_background">@color/common_default_background_color</item>
+        <item name="common_activity_background_grey">@color/common_default_background_grey_color</item>
+        <item name="common_view_background">@color/common_default_background_color</item>
+        <item name="common_view_background_grey">@color/common_default_background_grey_color</item>
+        <item name="common_ripple_background">@color/common_default_ripple_background_color</item>
+        <item name="common_view_background_dark_grey">@color/common_default_dark_grey_background_color</item>
+        <item name="common_30_transparent">@color/common_default_30_transparent</item>
+        <item name="common_foreground_color">@color/common_default_foreground_color</item>
+        <item name="common_background_color">@color/common_default_background_color</item>
+
+        <item name="common_setting_item_background">@color/common_default_background_color</item>
+        <item name="common_setting_item_main_text_color">@color/common_text_main_color</item>
+        <item name="common_setting_item_detail_text_color">@color/common_text_third_color</item>
+        <item name="common_setting_item_tip_text_color">@color/common_text_third_color</item>
+        <item name="common_setting_item_warn_color">@color/common_text_warning_color</item>
+        <item name="common_setting_item_switcher_color">@color/common_default_switcher_color</item>
+        <item name="common_setting_item_right_icon_color">@color/common_default_icon_color</item>
+        <item name="common_setting_item_icon_color">@color/common_default_icon_color</item>
+
+        <item name="common_item_line_color">@color/common_underline_color</item>
+        <item name="common_text_main_color">@color/common_text_main_color</item>
+        <item name="common_text_secondary_color">@color/common_text_secondary_color</item>
+        <item name="common_text_third_color">@color/common_text_third_color</item>
+        <item name="common_text_warn_color">@color/common_text_warning_color</item>
+        <item name="common_text_blue_color">@color/common_text_blue_color</item>
+        <item name="common_text_green_color">@color/common_text_green_color</item>
+        <item name="common_text_white_color">@color/common_color_white</item>
+        <item name="common_text_black_color">@color/common_color_black</item>
+        <item name="common_view_background_transparent">@color/common_color_transparent</item>
+
+        <item name="common_progress_tint_color">@color/common_progress_tint_color</item>
+        <item name="common_secondary_blue_color">@color/common_secondary_blue_color</item>
+
+        <item name="common_ripple_color">@color/common_default_ripple_color</item>
+        <item name="common_icon_color">@color/common_default_icon_color</item>
+        <item name="common_icon_color_grey">@color/common_default_icon_grey_color</item>
+        <item name="common_icon_color_light_grey">@color/common_default_icon_light_grey_color</item>
+        <item name="common_icon_background">@color/common_default_icon_background</item>
+        <item name="common_icon_verify_go_disabled_color">@drawable/common_verify_go_icon_selector</item>
+        <item name="common_icon_clear_color">@drawable/common_input_clear_selector</item>
+        <item name="common_selected_color">@color/common_default_selected_color</item>
+        <item name="common_black_color">@color/common_color_black</item>
+        <item name="common_white_color">@color/common_color_white</item>
+        <item name="common_grey_color">@color/common_default_grey_color</item>
+
+        <item name="common_button_blue_color">@color/common_blue_button_color</item>
+        <item name="common_button_blue_sub_color">@color/common_blue_sub_button_color</item>
+        <item name="common_button_red_color">@color/common_red_button_color</item>
+        <item name="common_button_red_sub_color">@color/common_red_sub_button_color</item>
+        <item name="common_button_disabled_color">@color/common_disabled_button_color</item>
+
+        <item name="fill_status_bar">true</item>
+        <item name="show_bottom_line">false</item>
+        <item name="title_bar_background">@color/common_default_background_color</item>
+        <item name="title_bar_height">52dp</item>
+
+        <item name="left_type">image</item>
+        <item name="left_image">@drawable/common_arrow_back_icon</item>
+        <item name="left_text_size">17sp</item>
+        <item name="left_text_color">@color/common_text_main_color</item>
+
+        <item name="right_type">none</item>
+        <item name="right_text_size">17sp</item>
+        <item name="right_text_color">@color/common_text_main_color</item>
+
+        <item name="center_type">text</item>
+        <item name="center_text_color">@color/common_text_main_color</item>
+        <item name="center_text_size">17sp</item>
+    </style>
+
+    <style name="CommonBcmTheme.Transparent" parent="CommonBcmTheme.Basic">
+        <item name="android:windowBackground">@color/common_color_transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="CommonBcmTheme.Transparent.Full" parent="CommonBcmTheme.Transparent">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!--Transparent-->
+    <style name="CommonTransparentStatusBar" parent="CommonBcmTheme.Basic">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+</resources>

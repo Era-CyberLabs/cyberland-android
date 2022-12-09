@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/startup_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/me_logo_animation_list"
+        android:tint="?attr/common_text_main_color"
+        android:contentDescription="icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/startup_create"
+        style="@style/CommonBlueButton"
+        android:minWidth="180dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/me_str_create_account"
+        android:textColor="@color/common_color_white"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/startup_scan"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/startup_scan"
+        style="@style/CommonLightBlueButton"
+        android:minWidth="180dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/common_button_blue_light_bg"
+        android:text="@string/me_str_scan_to_login"
+        android:textColor="@color/common_color_379BFF"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/startup_import"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/startup_import"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"
+        android:minWidth="180dp"
+        android:textColor="@color/common_color_379BFF"
+        android:textSize="14sp"
+        android:text="@string/me_import_account"
+        app:layout_constraintBottom_toTopOf="@+id/startup_dev"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/startup_dev"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"
+        android:minWidth="180dp"
+        android:textColor="@color/common_color_379BFF"
+        android:textSize="14sp"
+        android:text="@string/me_setting_access_point_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

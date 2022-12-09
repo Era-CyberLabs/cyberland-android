@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.bcm.messenger.ui.HomeProfileLayout
+        android:id="@+id/switcher_profile_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <Button
+        android:text="@string/app_access_point"
+        android:textColor="?attr/common_text_main_color"
+        android:id="@+id/switcher_env_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_item_ripple_transparent_bg" />
+
+</LinearLayout>

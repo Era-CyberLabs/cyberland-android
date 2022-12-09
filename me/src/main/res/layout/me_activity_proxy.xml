@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.bcm.messenger.common.ui.CommonTitleBar2
+        android:id="@+id/function_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_text="@string/me_setting_proxy_title"
+        app:right_type="image"
+        app:right_image="@drawable/common_add_icon"
+        app:right_image_color="?attr/common_icon_color"/>
+
+    <com.bcm.messenger.common.ui.CommonSettingItem
+        android:id="@+id/function_enable"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:setting_item_name="@string/me_enable_proxy"
+        app:setting_item_name_color="?attr/common_text_blue_color"
+        app:setting_item_right="none"
+        app:setting_item_switch="off"
+        app:setting_item_line="false"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/select_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="9dp"
+        android:textSize="14sp"
+        android:text="@string/me_proxy_configurations"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/server_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

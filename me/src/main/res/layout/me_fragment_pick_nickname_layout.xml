@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.bcm.messenger.common.ui.CommonTitleBar2
+            android:id="@+id/nickname_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nickname_header"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/me_nick_name_set_title"
+            android:textColor="?attr/common_text_main_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nickname_title_bar" />
+
+        <com.bcm.messenger.common.ui.ClearButtonEditText
+            android:id="@+id/new_nickname"
+            style="@style/CommonEditTextView"
+            android:layout_marginTop="30dp"
+            android:hint="@string/me_nickname_placeholder"
+            android:imeOptions="actionDone"
+            android:maxLength="30"
+            app:clearButtonHeight="12dp"
+            app:clearButtonPadding="10dp"
+            app:clearButtonWidth="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nickname_header"
+            app:paddingEnd="15dp"
+            app:showClearButton="true" />
+
+        <Button
+            android:id="@+id/nick_done_button"
+            style="@style/CommonBlueButton"
+            android:layout_marginBottom="30dp"
+            android:enabled="false"
+            android:text="@string/common_string_save"
+            android:textColor="?attr/common_white_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

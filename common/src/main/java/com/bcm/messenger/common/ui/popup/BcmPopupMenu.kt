@@ -1,0 +1,133 @@
+package com.bcm.messenger.common.ui.popup
+
+import android.annotation.SuppressLint
+import android.content.Context
+import android.view.Gravity
+import android.view.Menu
+import android.view.View
+import androidx.annotation.AttrRes
+import androidx.annotation.DrawableRes
+import androidx.appcompat.view.menu.MenuBuilder
+import androidx.appcompat.view.menu.MenuPopupHelper
+import androidx.appcompat.widget.PopupMenu
+import com.bcm.messenger.common.R
+import com.bcm.messenger.common.utils.getAttrColor
+import com.bcm.messenger.common.utils.getAttribute
+import com.bcm.messenger.common.utils.getDrawable
+import com.bcm.messenger.utility.AppContextHolder
+import java.lang.ref.WeakReference
+
+/**
+ * PopupMenu，PopupWindow
+ *
+ * Created by Kin on 2019/7/2
+ */
+class BcmPopupMenu {
+    companion object {
+        private val inst = BcmPopupMenu()
+        fun getInstance() = inst
+    }
+
+    @SuppressLint("RestrictedApi")
+    private fun showMenu(config: MenuConfig) {
+        val context = config.context?.get() ?: return
+        val anchorView = config.anchorView ?: return
+
+        val popupMenu = PopupMenu(context, anchorView, config.gravity)
+        val menu = popupMenu.menu
+        config.menuItem.forEachIndexed { index, menuText ->
+            menu.add(Menu.NONE, index, index, menuText.title)
+            if (menuText.iconRes != 0) {
+                val drawable = getDrawable(menuText.iconRes)
+                drawable.setTint(context.getAttrColor(menuText.iconColor))
+                menu.getItem(index).icon = drawable
+                (menu as? MenuBuilder)?.setOptionalIconsVisible(true)
+            }
+        }
+
+        popupMenu.setOnMenuItemClickListener { menuItem ->
+            config.selectCallback(menuItem.itemId)
+            return@setOnMenuItemClickListener true
+        }
+        popupMenu.setOnDismissListener {
+            config.dismissCallback()
+        }
+
+        try {
+            val field = popupMenu.javaClass.getDeclaredField("mPopup")
+            field.isAccessible = true
+            val helper = field.get(popupMenu) as MenuPopupHelper
+            if (config.x == -1 || config.y == -1) {
+                helper.show()
+            } else {
+                helper.show(config.x, config.y)
+            }
+            helper.setForceShowIcon(true)
+        } catch (e: Exception) {
+            popupMenu.show()
+        }
+    }
+
+    class Builder(context: Context) {
+        private val config = MenuConfig()
+
+        init {
+            config.context = WeakReference(context)
+        }
+
+        fun setMenuItem(items: List<MenuItem>): Builder {
+            config.menuItem = items
+            return this
+        }
+
+        fun setSelectedCallback(callback: (Int) -> Unit): Builder {
+            config.selectCallback = callback
+            return this
+        }
+
+        fun setAnchorView(view: View): Builder {
+            config.anchorView = view
+            return this
+        }
+
+        fun setGravity(gravity: Int): Builder {
+            config.gravity = gravity
+            return this
+        }
+
+        fun setDismissCallback(callback: () -> Unit): Builder {
+            config.dismissCallback = callback
+            return this
+        }
+
+        /**
+         * x y
+         * x yrawXy - view.height
+         */
+        fun show(x: Int, y: Int) {
+            config.x = x
+            config.y = y
+            getInstance().showMenu(config)
+        }
+
+        /**
+         * PopupMenu
+         */
+        fun show() {
+            getInstance().showMenu(config)
+        }
+    }
+
+    class MenuConfig {
+        var context: WeakReference<Context>? = null
+        var anchorView: View? = null
+        var menuItem = listOf<MenuItem>()
+        var selectCallback: (Int) -> Unit = {}
+        var dismissCallback: () -> Unit = {}
+        var gravity = Gravity.NO_GRAVITY
+        var x = -1
+        var y = -1
+    }
+
+    class MenuItem(val title: String, @DrawableRes val iconRes: Int = 0, @AttrRes val iconColor: Int = R.attr.common_icon_color)
+}

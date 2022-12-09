@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="?attr/common_ripple_color">
+    <item>
+        <selector>
+            <item android:state_enabled="true">
+                <shape>
+                    <solid android:color="?attr/chats_conversation_outgo_button_background_color"/>
+                    <corners android:radius="8dp"/>
+                </shape>
+            </item>
+            <item android:state_enabled="false">
+                <shape>
+                    <solid android:color="#0C000000"/>
+                    <corners android:radius="8dp"/>
+                </shape>
+            </item>
+        </selector>
+    </item>
+</ripple>

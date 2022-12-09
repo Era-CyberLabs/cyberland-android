@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/chats_media_control_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.bcm.messenger.common.ui.CommonLoadingView
+        android:id="@+id/chats_more_progress"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:clickable="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:circle_size="large"
+        app:circle_color="white"
+        app:auto_start="true"
+        tools:visibility="gone" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chats_default_option_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/chats_media_download_flow_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/common_item_ripple_oval_transparent_bg"
+            android:src="@drawable/chats_media_view_save_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <View
+            android:id="@+id/chats_media_download_flow_btn_mask"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/chats_media_view_disabled_fg"
+            app:layout_constraintBottom_toBottomOf="@id/chats_media_download_flow_btn"
+            app:layout_constraintEnd_toEndOf="@id/chats_media_download_flow_btn"
+            app:layout_constraintStart_toStartOf="@id/chats_media_download_flow_btn"
+            app:layout_constraintTop_toTopOf="@id/chats_media_download_flow_btn" />
+
+        <ImageView
+            android:id="@+id/chats_media_pool_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/common_item_ripple_oval_transparent_bg"
+            android:src="@drawable/chats_media_view_more_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/chat_status_fill"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_height="15dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chat_title_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="52dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chat_status_fill">
+
+        <TextView
+            android:id="@+id/bar_back_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minWidth="45dp"
+            android:paddingStart="15dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="2dp"
+            android:textColor="?attr/common_text_main_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/bar_back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/common_arrow_back_icon"
+            android:tint="?attr/common_icon_color"
+            android:paddingStart="15dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="2dp"
+            app:layout_constraintStart_toStartOf="@id/bar_back_text"
+            app:layout_constraintTop_toTopOf="@id/bar_back_text"
+            app:layout_constraintBottom_toBottomOf="@id/bar_back_text"/>
+
+        <com.bcm.messenger.common.ui.BadgeLayout
+            android:id="@+id/bar_right_layout"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginEnd="@dimen/common_horizontal_gap"
+            android:gravity="center"
+            android:minWidth="38dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:locate_pos_gap="2dp"
+            app:locate_pos_id="@+id/bar_recipient_photo">
+
+            <com.bcm.messenger.common.ui.RecipientAvatarView
+                android:id="@+id/bar_recipient_photo"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/burn_time"
+                android:layout_width="wrap_content"
+                android:layout_height="12dp"
+                android:background="@drawable/chats_burn_time_background"
+                android:textSize="8sp"
+                android:textColor="#ffffff"
+                android:paddingEnd="3dp"
+                android:paddingStart="3dp"
+                android:gravity="center"
+                tools:text="5M"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </com.bcm.messenger.common.ui.BadgeLayout>
+        <LinearLayout
+            android:id="@+id/bar_title_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/bar_right_layout"
+            app:layout_constraintStart_toEndOf="@id/bar_back_text"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/bar_center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.bcm.messenger.common.ui.emoji.EmojiTextView
+                    android:id="@+id/bar_title_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="middle"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textColor="?attr/common_text_main_color"
+                    android:textSize="17sp"
+                    tools:text="Title" />
+            </LinearLayout>
+
+            <com.bcm.messenger.common.ui.emoji.EmojiTextView
+                android:id="@+id/bar_title_sub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="middle"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="?attr/common_text_third_color"
+                android:textSize="13sp"
+                tools:text="Title" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

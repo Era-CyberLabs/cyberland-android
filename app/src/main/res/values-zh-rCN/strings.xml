@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_activity_dev_settings">开发设置</string>
+    <string name="app_name">BCM</string>
+    <string-array name="pref_server_mode_list_titles">
+        <item>Online Server</item>
+        <item>Test Server</item>
+        <item>Dev Server</item>
+    </string-array>
+    <string-array name="pref_server_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string name="pref_header_general">通用</string>
+    <string name="pref_title_social_recommendations">开启社交推荐</string>
+    <string name="pref_description_social_recommendations">根据你的消息历史推荐朋友</string>
+    <string name="pref_title_dev_server_url">开发服务器Url</string>
+    <string name="pref_default_server_url">不配置</string>
+    <string name="pref_title_server_mode">服务器模式</string>
+    <string name="pref_header_data_sync">数据和同步</string>
+    <string name="pref_title_sync_frequency">同步间隔</string>
+    <string name="pref_title_system_sync_settings">系统同步设置</string>
+    <string name="pref_header_notifications">通知</string>
+    <string name="pref_title_new_message_notifications">新信息通知</string>
+    <string name="pref_title_ringtone">铃声</string>
+    <string name="pref_ringtone_silent">静音</string>
+    <string name="pref_title_vibrate">震动</string>
+    <string name="hint_pick_nickname">请选择昵称</string>
+    <string name="hint_input_nickname">请输入昵称</string>
+    <string name="str_later">以后</string>
+    <string name="str_confirm">确认</string>
+    <string name="tips_empty_name">用户名为空</string>
+    <string name="tips_nickname_saved">已保存昵称</string>
+    <string name="tips_retry">请重试</string>
+    <string name="title_update_info">更新信息(v%s)</string>
+    <string name="OK">OK</string>
+    <string name="upgrade">更新</string>
+
+    <!-- Tabless UI -->
+    <string name="tabless_ui_intro_text_1">多账户同时在线</string>
+    <string name="tabless_ui_intro_confirm">知道了</string>
+    <string name="tabless_ui_delete_account_content">在删除该帐户之前，请确保已备份该帐户。 您确定要立即删除它吗？</string>
+    <string name="tabless_ui_delete_account_str_remote">立即删除</string>
+    <string name="tabless_ui_account_reach_max_size">支持最多3个账号同时在线。若需登录一个新账号，请先退出一个在线账号。</string>
+    <string name="tabless_ui_import_account">导入账号</string>
+    <string name="tabless_ui_add_account">添加账号</string>
+
+    <!-- Dev Settings -->
+    <string name="dev_settings_title">开发设置</string>
+    <string name="dev_settings_test_crash">测试崩溃日志</string>
+    <string name="dev_settings_test_anr">测试ANR</string>
+    <string name="dev_settings_test_connection">测试网络连通性</string>
+    <string name="dev_settings_export_data">导出数据</string>
+    <string name="dev_settings_wallet_test_chain">启用钱包测试链</string>
+    <string name="dev_settings_signature">查看APP签名</string>
+    <string name="dev_settings_enable_https">启用HTTPS</string>
+    <string name="dev_settings_enable_lbs">启用LBS</string>
+    <string name="dev_settings_enable_vpn">启用VPN</string>
+    <string name="dev_settings_enable_test_env">启用测试环境</string>
+    <string name="dev_settings_env_enter_url_hint">输入IP(如 127.0.0.1:8080)</string>
+    <string name="dev_settings_ip_select_title">选择IP</string>
+    <string name="dev_settings_ip_select">选择</string>
+    <string name="dev_settings_webview_test">WebView测试</string>
+    <string name="dev_settings_enter_url_hint">网址(如 https://bcm.social/)</string>
+    <string name="dev_settings_webview_test_go">去看看</string>
+    <string name="dev_settings_webview_test_dialog_title">提升</string>
+    <string name="dev_settings_webview_test_dialog_content">兄嘚，你要去哪？</string>
+    <string name="dev_settings_webview_test_dialog_ok">好嘞</string>
+    <string name="dev_settings_save_settings_title">保存设置？</string>
+    <string name="account_pin_clear_tip_content">PIN锁已升级为App锁，其他账号的PIN锁将被清除。</string>
+    <string name="account_pin_clear_tip_major_content">PIN锁已升级为App锁，当前账号的PIN码已被自动设置为App PIN。</string>
+    <string name="account_pin_clear_tip_major_ok">重新设置</string>
+    <string name="account_pin_clear_tip_ok">设置</string>
+    <string name="app_access_point">接入点</string>
+</resources>

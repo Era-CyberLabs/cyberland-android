@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.bcm.messenger.common.ui.CommonTitleBar2
+        android:id="@+id/language_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:center_text="@string/me_setting_language_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:left_text="@string/common_cancel"
+        app:left_type="text"
+        app:right_text_style="bold"
+        app:right_text="@string/common_done"
+        app:right_type="text" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/language_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
+</LinearLayout>
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/input_pin_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
+
+    <TextView
+        android:id="@+id/register_succeed_header"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginTop="110dp"
+        android:text="@string/me_text_account_created"
+        android:textColor="?attr/common_text_main_color"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <ImageView
+        android:id="@+id/set_new_password_done_button"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/common_tick_icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_succeed_header" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

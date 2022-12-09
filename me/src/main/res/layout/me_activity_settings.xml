@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.bcm.messenger.common.ui.CommonTitleBar2
+        android:id="@+id/notification_title_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:center_text="@string/me_setting_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.bcm.messenger.common.ui.AppNotificationNoticer
+        android:id="@+id/notification_noticer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/common_horizontal_gap"
+        android:paddingTop="10dp"
+        android:paddingEnd="@dimen/common_horizontal_gap"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/notification_title_bar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/notification_noticer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/setting_head_view"
+                layout="@layout/me_settings_head_view"
+                android:layout_width="match_parent"
+                android:layout_height="144dp" />
+
+            <com.bcm.messenger.common.ui.CommonSettingItem
+                android:id="@+id/setting_privacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:setting_item_line="true"
+                app:setting_item_name="@string/me_privacy_settings_title"
+                app:setting_item_right="arrow"
+                app:setting_item_switch="none" />
+
+            <com.bcm.messenger.common.ui.CommonSettingItem
+                android:id="@+id/setting_storage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:setting_item_line="false"
+                app:setting_item_name="@string/me_setting_clear_cache_title"
+                app:setting_item_right="arrow"
+                app:setting_item_switch="none" />
+
+            <com.bcm.messenger.common.ui.CommonSettingItem
+                android:id="@+id/setting_notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:setting_item_head="@string/me_setting_general_head"
+                app:setting_item_line="true"
+                app:setting_item_name="@string/me_setting_notification_title"
+                app:setting_item_right="arrow"
+                app:setting_item_switch="none" />
+
+            <com.bcm.messenger.common.ui.CommonSettingItem
+                android:id="@+id/setting_theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:setting_item_line="true"
+                app:setting_item_name="@string/me_theme_settings_title"
+                app:setting_item_right="arrow"
+                app:setting_item_switch="none" />
+
+            <com.bcm.messenger.common.ui.CommonSettingItem
+                android:id="@+id/setting_language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:setting_item_line="true"
+                app:setting_item_name="@string/me_setting_language_title"
+                app:setting_item_right="arrow"
+                app:setting_item_switch="none" />
+
+            <com.bcm.messenger.common.ui.CommonSettingItem
+                android:id="@+id/setting_tts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:setting_item_line="true"
+                app:setting_item_name="@string/me_setting_tts_language_title"
+                app:setting_item_right="arrow"
+                app:setting_item_sub_name="@string/me_setting_tts_language_sub_title"
+                app:setting_item_switch="none" />
+
+            <com.bcm.messenger.common.ui.CommonSettingItem
+                android:id="@+id/privacy_pin_lock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:setting_item_line="true"
+                app:setting_item_name="@string/me_setting_pin_lock_title"
+                app:setting_item_right="arrow"
+                app:setting_item_switch="none" />
+
+            <com.bcm.messenger.common.ui.CommonSettingItem
+                android:id="@+id/setting_screen_secure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:setting_item_line="true"
+                app:setting_item_name="@string/me_screen_secure_enable_title"
+                app:setting_item_right="none"
+                app:setting_item_sub_name="@string/me_screen_secure_describe"
+                app:setting_item_switch="off" />
+
+            <com.bcm.messenger.common.ui.CommonSettingItem
+                android:id="@+id/setting_proxy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:setting_item_line="true"
+                app:setting_item_name="@string/me_setting_proxy_title"
+                app:setting_item_right="arrow"
+                app:setting_item_sub_name="@string/me_setting_proxy_item_describe"
+                app:setting_item_switch="none" />
+
+            <com.bcm.messenger.common.ui.CommonSettingItem
+                android:id="@+id/setting_access_point"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:setting_item_line="true"
+                app:setting_item_name="@string/me_setting_access_point_title"
+                app:setting_item_right="arrow"
+                app:setting_item_sub_name="@string/me_setting_access_point_describe"
+                app:setting_item_switch="none" />
+
+            <com.bcm.messenger.common.ui.CommonSettingItem
+                android:id="@+id/setting_rtc_p2p"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:setting_item_line="false"
+                app:setting_item_name="@string/me_setting_rtc_p2p_title"
+                app:setting_item_right="none"
+                app:setting_item_sub_name="@string/me_setting_rtc_p2p_sub_title"
+                app:setting_item_switch="off" />
+
+            <com.bcm.messenger.common.ui.CommonSettingItem
+                android:id="@+id/setting_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:setting_item_head="@string/me_setting_others_head"
+                app:setting_item_line="true"
+                app:setting_item_name="@string/me_setting_feedback_title"
+                app:setting_item_right="arrow"
+                app:setting_item_switch="none" />
+
+            <com.bcm.messenger.common.ui.CommonSettingItem
+                android:id="@+id/setting_faq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:setting_item_line="true"
+                app:setting_item_name="@string/me_setting_help_title"
+                app:setting_item_right="arrow"
+                app:setting_item_switch="none" />
+
+            <com.bcm.messenger.common.ui.CommonSettingItem
+                android:id="@+id/setting_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:setting_item_line="false"
+                app:setting_item_name="@string/me_setting_about_title"
+                app:setting_item_right="arrow"
+                app:setting_item_switch="none" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
